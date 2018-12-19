@@ -34,7 +34,6 @@
     <module name="TIG_PostcodeCheckoutSupport" setup_version="1.0.0">
         <sequence>
             <module name="TIG_Postcode"/>
-            <module name="Mageplaza_Osc"/>
         </sequence>
     </module>
 </config>
