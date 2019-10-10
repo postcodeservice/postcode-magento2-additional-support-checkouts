@@ -30,6 +30,13 @@
  */
 
 var config = {
+    config: {
+        mixins: {
+            'Onestepcheckout_Iosc/js/ajax': {
+                'TIG_PostcodeCheckoutSupport/js/view/onestepcheckout/ajax-mixin': true
+            }
+        }
+    },
     map : {
         '*': {
             'Mageplaza_Osc/js/view/billing-address' : 'TIG_PostcodeCheckoutSupport/js/view/mageplaza/billing-address'
