@@ -26,6 +26,7 @@ use Magento\Checkout\Block\Checkout\LayoutProcessorInterface;
 use Magento\Checkout\Model\Session as CheckoutSession;
 use Magento\Customer\Model\AttributeMetadataDataProvider;
 use Magento\Framework\App\ObjectManager;
+use Magento\Framework\ObjectManagerInterface;
 use Magento\Ui\Component\Form\AttributeMapper;
 use Mageplaza\Osc\Helper\Data as OscHelper;
 
@@ -67,22 +68,23 @@ class LayoutProcessor implements LayoutProcessorInterface
 
     /**
      * LayoutProcessor constructor.
-     * @param CheckoutSession $checkoutSession
-     * @param OscHelper $oscHelper
+     *
+     * @param CheckoutSession               $checkoutSession
      * @param AttributeMetadataDataProvider $attributeMetadataDataProvider
-     * @param AttributeMapper $attributeMapper
-     * @param AttributeMerger $merger
+     * @param AttributeMapper               $attributeMapper
+     * @param AttributeMerger               $merger
+     * @param ObjectManagerInterface        $objectManager
      */
     public function __construct(
         CheckoutSession $checkoutSession,
-        OscHelper $oscHelper,
         AttributeMetadataDataProvider $attributeMetadataDataProvider,
         AttributeMapper $attributeMapper,
-        AttributeMerger $merger
+        AttributeMerger $merger,
+        ObjectManagerInterface $objectManager
     )
     {
         $this->checkoutSession = $checkoutSession;
-        $this->_oscHelper = $oscHelper;
+        $this->_oscHelper = $objectManager->get('\Mageplaza\Osc\Helper\Data');
         $this->attributeMetadataDataProvider = $attributeMetadataDataProvider;
         $this->attributeMapper = $attributeMapper;
         $this->merger = $merger;
