@@ -10,13 +10,13 @@
   "authors": [
     {
       "name": "TIG",
-      "email": "servicedesk@tig.nl",
-      "homepage": "http://tig.nl"
+      "email": "support@postcodeservice.nl",
+      "homepage": "https://postcodeservice.nl"
     }
   ],
   "support": {
-    "email": "servicedesk@tig.nl",
-    "issues": "http://servicedesk.tig.nl/hc/nl/requests/new"
+    "email": "support@postcodeservice.nl",
+    "issues": "https://porta.tig.nl/"
   },
   "homepage": "https://confluence.tig.nl/x/GoNUAw",
   "minimum-stability": "stable",
