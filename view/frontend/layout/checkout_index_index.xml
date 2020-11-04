@@ -1,5 +1,5 @@
-<?php
-/**
+<?xml version="1.0" encoding="UTF-8"?><!--
+ *
  *
  *          ..::..
  *     ..::::::::::::..
@@ -28,9 +28,10 @@
  *
  * @copyright   Copyright (c) Total Internet Group B.V. https://tig.nl/copyright
  * @license     http://creativecommons.org/licenses/by-nc-nd/3.0/nl/deed.en_US
- */
-\Magento\Framework\Component\ComponentRegistrar::register(
-    \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'TIG_PostcodeCheckoutSupport',
-    __DIR__
-);
+ *
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <referenceContainer name="before.body.end">
+        <block class="TIG\PostcodeCheckoutSupport\Block\Frontend\Checkout\DataProvider"/>
+    </referenceContainer>
+</page>
